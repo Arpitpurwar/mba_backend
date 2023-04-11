@@ -4,7 +4,6 @@ module.exports = passport => {
     passport.use(new LocalStrategy(
         async function(username, password, done) {
             try{
-                console.log('first time here');
             const user = await User.findOne({ username });
 
             if (!user) { return done(null, false); }

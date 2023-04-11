@@ -2,7 +2,7 @@ const express = require('express'); // server software
 const bodyParser = require('body-parser'); // parser middleware
 const session = require('express-session');  // session middleware
 const passport = require('passport');  // authentication
-const User = require('./user.js'); 
+require('./user.js'); 
 const inializePassport = require('./passportConfig.js');
 
 const app = express();
@@ -21,7 +21,6 @@ app.use(session({
 
 inializePassport(passport);
 
-app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/', (req, res) => {
