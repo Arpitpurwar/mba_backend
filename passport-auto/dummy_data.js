@@ -1,4 +1,4 @@
-const UserDetails = require('./user');
+const User = require('./user');
 
-UserDetails.register({ username: 'candy', active: false }, 'cane');
-UserDetails.register({ username: 'starbuck', active: false }, 'redeye');
+User.register({ username: 'candy', active: false }, 'cane');
+User.register({ username: 'starbuck', active: false }, 'redeye');
